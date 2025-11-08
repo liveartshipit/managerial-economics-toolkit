@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 185 70% 22%;
+    --color-primary-foreground: 0 0% 100%;
+    --color-secondary: 185 60% 38%;
+    --color-secondary-foreground: 0 0% 100%;
+    --color-tertiary: 34 45% 75%;
+    --color-tertiary-foreground: 185 70% 22%;
+    --color-neutral: 210 15% 96%;
+    --color-neutral-foreground: 210 30% 20%;
+    --color-success: 160 60% 35%;
+    --color-warning: 40 90% 45%;
+    
+    --color-background: 0 0% 100%;
+    --color-foreground: 210 30% 20%;
+    --color-border: 210 15% 90%;
+    --color-input: 210 15% 90%;
+    --color-ring: 185 70% 32%;
+    
+    --color-muted: 210 15% 96%;
+    --color-muted-foreground: 210 30% 20%;
+    --color-accent: 34 45% 75%;
+    --color-accent-foreground: 185 70% 22%;
+    
+    --color-destructive: 0 84% 60%;
+    --color-destructive-foreground: 0 0% 100%;
+    
+    --color-card: 0 0% 100%;
+    --color-card-foreground: 210 30% 20%;
+    --color-popover: 0 0% 100%;
+    --color-popover-foreground: 210 30% 20%;
+    
+    --gradient-1: linear-gradient(135deg, hsl(185, 70%, 22%) 0%, hsl(185, 55%, 35%) 100%);
+    --gradient-2: linear-gradient(135deg, hsl(185, 50%, 50%) 0%, hsl(185, 65%, 30%) 100%);
+    --button-border-gradient: linear-gradient(90deg, hsla(185, 70%, 45%, 1) 0%, hsla(185, 70%, 32%, 0.7) 100%);
+    
+    --font-sans: "DM Sans", sans-serif;
+    --font-mono: "IBM Plex Mono", monospace;
+    
+    --radius: 8px;
+  }
+  
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body, html {
+    @apply bg-background text-foreground font-sans;
+    color: hsl(210, 30%, 20%);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-foreground;
+  }
+  
+  p, span, div, a {
+    @apply text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-gradient-1 {
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .bg-gradient-1 {
+    background: var(--gradient-1);
+  }
+  
+  .bg-gradient-2 {
+    background: var(--gradient-2);
+  }
+}
